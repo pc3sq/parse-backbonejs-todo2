@@ -5,6 +5,10 @@ app.item = Backbone.Model.extend({
 	defaults: {
 		title: "(empty)",
 		done: false
+	},
+
+	initialize: function() {
+		console.log("An item entitled" + this.get("name") + "has been created.");
 	}
 
 });
