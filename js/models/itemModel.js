@@ -1,6 +1,6 @@
 var app = app || {};
 
-app.item = Backbone.Model.extend({
+app.item = Parse.Object.extend("Item", {
 
 	defaults: {
 		title: "(empty)",
