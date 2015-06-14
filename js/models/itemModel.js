@@ -8,7 +8,7 @@ app.item = Backbone.Model.extend({
 	},
 
 	initialize: function() {
-		console.log("An item entitled" + this.get("name") + "has been created.");
+		console.log("An item entitled" + this.get("title") + "has been created.");
 	}
 
 });
