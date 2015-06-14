@@ -21,7 +21,16 @@ app.Item = Parse.Object.extend("Item", {
 });
 
 app.ItemCollection = Parse.Object.extend({
-	model: app.item
+	model: app.item,
+
+	done: function() {
+	  return this.where({done: true});
+	},
+
+	remaining: function() {
+	  return this.where({done: false});
+	}
+	
 });
 
 app.items = new itemCollection;
