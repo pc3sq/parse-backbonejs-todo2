@@ -1,6 +1,6 @@
 var app = app || {};
 
-app.item = Parse.Object.extend("Item", {
+app.Item = Parse.Object.extend("Item", {
 
 	defaults: {
 		title: "(empty)",
@@ -20,7 +20,7 @@ app.item = Parse.Object.extend("Item", {
 
 });
 
-app.itemCollection = Parse.Object.extend({
+app.ItemCollection = Parse.Object.extend({
 	model: app.item
 });
 
