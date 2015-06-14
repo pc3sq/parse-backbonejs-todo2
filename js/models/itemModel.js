@@ -19,3 +19,7 @@ app.item = Parse.Object.extend("Item", {
 		}
 
 });
+
+app.itemCollection = Parse.Object.extend({
+	model: app.item
+});
