@@ -23,3 +23,7 @@ app.item = Parse.Object.extend("Item", {
 app.itemCollection = Parse.Object.extend({
 	model: app.item
 });
+
+app.items = new itemCollection;
+app.items.query = new Parse.Query(Item);
+app.items.fetch();
