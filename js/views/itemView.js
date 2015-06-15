@@ -23,3 +23,19 @@ app.itemView = Backbone.View.extend({
 	}
 
 });
+
+app.itemsView = Backbone.View.extend({
+	
+	tagName: "section",
+
+	render: function() {
+		app.items.each(this.addItem, this);
+		return this;
+	},
+
+	addItem: function(item) {
+		var itemView = new app.itemView ({model: item});
+		this.$el.append(itemView.render().el)
+	}
+
+});
